@@ -29,7 +29,7 @@
       <snapshotRepository>
          <id>nexus</id>
          <name>snapshots</name>
-         <url>http://192.168.153.132:8081/repository/maven-snapshots/</url>
+         <url>http://192.168.153.132:8081/repository/maven-releases/</url>
       </snapshotRepository>
    </distributionManagement>
    
@@ -48,6 +48,8 @@
                   <configuration>
                      <!-- <file>target/${project.artifactId}-${project.version}.jar</file>
                      <url>http://192.168.153.132:8081/repository/maven-snapshots/</url>
+                     <file>target/${project.artifactId}-${project.version}.jar</file>
+                     <url>http://192.168.153.132:8081/repository/maven-releases/</url>
                      <repositoryId>nexus</repositoryId>
                      <groupId>${project.groupId}</groupId>
                      <artifactId>${project.artifactId}</artifactId>
