@@ -4,7 +4,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>com.msentic.example</groupId>
    <artifactId>testciproject</artifactId>
-   <version>1.0.1</version>
+   <version>1.0.0</version>
    <name>Maven Deploy Example</name>
    <description>Project to demonstrate Maven deploy plugin</description>
    <url>https://github.com/msentic/TestCIProject</url>
@@ -17,7 +17,6 @@
       <connection>scm:git:https://github.com/msentic/TestCIProject.git</connection>
       <url>https://github.com/msentic/TestCIProject</url>
       <developerConnection>scm:git:https://github.com/msentic/TestCIProject.git</developerConnection>
-     <tag>v1.0.1</tag>
   </scm>
    
    <distributionManagement>
