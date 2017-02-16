@@ -43,10 +43,10 @@
                   <id>default-deploy</id>
                   <phase>deploy</phase>
                   <goals>
-                     <goal>deploy-file</goal>
+                     <goal>deploy</goal>
                   </goals>
                   <configuration>
-                     <file>target/${project.artifactId}-${project.version}.jar</file>
+                     <!-- <file>target/${project.artifactId}-${project.version}.jar</file>
                      <url>http://192.168.153.132:8081/repository/maven-snapshots/</url>
                      <repositoryId>nexus</repositoryId>
                      <groupId>${project.groupId}</groupId>
@@ -54,7 +54,7 @@
                      <version>${project.version}</version>
                      <generatePom>false</generatePom>
                      <packaging>jar</packaging>
-                     <skip>true</skip>
+                     <skip>true</skip> -->
                   </configuration>
                </execution>
             </executions>
@@ -65,7 +65,11 @@
             <configuration>
                <tagNameFormat>v@{project.version}</tagNameFormat>
                <autoVersionSubmodules>true</autoVersionSubmodules>
-               <releaseProfiles>releases</releaseProfiles>
+               <useReleaseProfile>false</useReleaseProfile>
+               <file>target/${project.artifactId}-${project.version}.jar</file>
+               <url>http://192.168.153.132:8081/repository/maven-releases/</url>
+               <repositoryId>nexus-release</repositoryId>
+               <goals>deploy</goals>
             </configuration>
          </plugin>
       </plugins>
