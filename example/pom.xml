@@ -22,7 +22,7 @@
    
    <distributionManagement>
       <repository>
-         <id>nexus</id>
+         <id>nexus-release</id>
          <name>releases</name>
          <url>http://192.168.153.132:8081/repository/maven-releases/</url>
       </repository>
@@ -60,7 +60,6 @@
             </executions>
          </plugin>
          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-release-plugin</artifactId>
             <version>2.5.3</version>
             <configuration>
